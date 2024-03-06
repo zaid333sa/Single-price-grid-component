@@ -1,0 +1,124 @@
+* {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+ul {
+    list-style: none;
+}
+body {
+    background-color: var(--Light-Gray);
+    width: 100%;
+    height: 100%;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.container .up {
+    padding: 40px;
+}
+.container .up p:nth-child(1) {
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.container .up p:nth-child(2) {
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.container .up p:nth-child(3) {
+    color: var(--Grayish-Blue);
+    font-size: 16px;
+    line-height: 1.6;
+}
+.container .down {
+    display: grid;
+    grid-template-columns: repeat(2 , 50%);
+    justify-content: space-between;
+    align-items: start;
+}
+.container .down .left {
+    background-color: hsl(179, 59%, 39%);
+    height: 100%;
+    flex-basis: 50%;
+    padding: 35px;
+}
+.container .down .left .sub {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.container .down .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.container .down .price p:nth-child(1) {
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.container .down .price p:nth-child(2) {
+    color: hsl(179, 54%, 55%);
+}
+.container .down .left p:last-of-type {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+}
+.container .down .left button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    border-radius: 5px;
+}
+.container .down .right {
+    background-color: hsl(179, 62%, 43%);
+    padding: 35px;
+    height: 100%;
+    color: white;
+}
+.container .down .right p {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.container .down .right ul li {
+    padding: 2px 0;
+    color: rgba(255, 255, 255, 0.695);
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    .container .down {
+        grid-template-columns: 1fr;
+    }
+
+}
